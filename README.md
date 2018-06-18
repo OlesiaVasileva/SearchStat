@@ -1,6 +1,3 @@
-# SearchStat
-GB Intern Project
-
 SearchStat Program from HardDevTeam
 =============================
 
@@ -9,9 +6,11 @@ SearchStat reached version 0.3
 INSTALLATION
 ------------
 
-SearchStat has program components for: WEB, IOS, Desktop, Android
-
-Hiden components that were used: crauler, web-service, MySQL database.
+SearchStat has program components for:
+-WEB
+-IOS
+-Desctop
+-Android
 
 REQUIREMENTS
 ------------
@@ -22,7 +21,7 @@ No specific requirements
 QUICK START
 -----------
 
-SearchStat comes with username ‚Äúuser‚Äù and password ‚Äúuser‚Äù.
+SearchStat comes with username ìuserî and password ìuserî.
 
 You can:
 1) Choose general or daily statistics
@@ -36,9 +35,8 @@ You can:
 WHAT'S NEXT
 -----------
 
-Version 0.4 ‚Äì signing up and login with your own username and password + recover your password
-
-Version 0.5 ‚Äì Search statistic of anyone‚Äôs popularity on different sites
+Version 0.4 ñ signing up and login with your own username and password + recover your password
+Version 0.5 ñ Search statistic of anyoneís popularity on different sites
 
 Team
 -----------

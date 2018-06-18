@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">SearchStat</string>
+
+    <string name="password">Password</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="detailed_stat">Detailed stat</string>
+    <string name="general_stat">General statistic</string>
+    <string name="detail_stat">Detail statistic</string>
+    <string name="name">Name</string>
+    <string name="mentions">Mentions</string>
+    <string name="person">Person</string>
+    <string name="number_of_new_pages">Number of new pages</string>
+    <string name="select_a_person">Select a person</string>
+    <string name="graphics">Graphics</string>
+    <string name="choose_date">Choose date</string>
+    <string name="ready">Ready</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="email">Email</string>
+    <string name="select_a_site">Select a site</string>
+    <string name="start_date">Start date</string>
+    <string name="end_date">End date</string>
+    <string name="date">Date</string>
+    <string name="current_date">Current date</string>
+    <string name="show_statistic">Show statistic</string>
+    <string name="sign_up">Sign up</string>
+    <string name="turn_on_internet">Turn internet ON</string>
+    <string name="no_connection_to_the_server">No connection to the server</string>
+    <string name="enter_password_again">Enter the password again</string>
+    <string name="select_site_and_person">Select site and person</string>
+    <string name="graph_general_stat">Graph of popularity of politicians by number of mentions</string>
+    <string name="graph_daily_stat">Graph of the number of pages with the mention of the policy from the selected period of time</string>
 </resources>
