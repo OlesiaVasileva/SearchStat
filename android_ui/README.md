@@ -1,7 +1,6 @@
 SearchStat Program from HardDevTeam - Android
-***
+=====================
 SearchStat reached version 0.5
-***
 
 INSTALLATION
 =====================
@@ -32,5 +31,6 @@ The SearchStat from HD-team <http://ishow-you.ru/>
 
 Contacts
 -----------------------------------
-Olesia Vasileva --------- olesia.vasilleva@gmail.com
-Alexandr Alizarchik ----- aoalizarchik@yandex.ru
+Olesia Vasileva - olesia.vasilleva@gmail.com
+
+Alexandr Alizarchik - aoalizarchik@yandex.ru
