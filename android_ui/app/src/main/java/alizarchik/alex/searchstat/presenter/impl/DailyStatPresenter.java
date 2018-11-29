@@ -59,7 +59,7 @@ public class DailyStatPresenter implements IDailyStatPresenter {
                 {
                     view.hideLoadingIndicator();
                     Log.d(TAG, "listPersons:" + listPersons);
-                    if (listPersons.isEmpty()) view.showNoConnectionMessage();
+                    if (listPersons.isEmpty()) view.сhooseDifferentDateRange();
                     else {
                         view.updatePersons(listPersons);
                     }
@@ -83,7 +83,7 @@ public class DailyStatPresenter implements IDailyStatPresenter {
                 {
                     view.hideLoadingIndicator();
                     Log.d(TAG, "listDS:" + listDailyStat);
-                    if (listDailyStat.isEmpty()) view.showNoConnectionMessage();
+                    if (listDailyStat.isEmpty()) view.сhooseDifferentDateRange();
                     else if (isUpdate) {
                         view.updateStat(listDailyStat);
                     } else {

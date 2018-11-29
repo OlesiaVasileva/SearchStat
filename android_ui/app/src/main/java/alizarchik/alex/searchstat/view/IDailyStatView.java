@@ -13,6 +13,7 @@ import alizarchik.alex.searchstat.model.entity.Site;
 public interface IDailyStatView {
     void hideLoadingIndicator();
     void showNoConnectionMessage();
+    void сhooseDifferentDateRange();
     void showNoConnectionToTheServer();
     void updateSites(List<Site> sites);
     void updatePersons(List<Person> persons);

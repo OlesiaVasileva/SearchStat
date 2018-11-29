@@ -67,7 +67,7 @@ public class LoginActivity extends AppCompatActivity implements ILoginView {
         password = findViewById(R.id.password);
         loginButton = findViewById(R.id.login_button);
         signUpButton = findViewById(R.id.sign_up_button);
-        progressBar = findViewById(R.id.progressBar);
+        progressBar = findViewById(R.id.progressBar_Login_Screen);
         progressBar.getIndeterminateDrawable().setColorFilter(ContextCompat
                 .getColor(this, R.color.colorPrimary), PorterDuff.Mode.MULTIPLY);
     }
@@ -109,6 +109,12 @@ public class LoginActivity extends AppCompatActivity implements ILoginView {
     public void saveToken(String token) {
         tokenStorage.tokenSave(token, LoginActivity.this);
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
         startActivity(intent);
     }
 }

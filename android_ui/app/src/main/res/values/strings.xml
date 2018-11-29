@@ -26,6 +26,7 @@
     <string name="show_statistic">Show statistic</string>
     <string name="sign_up">Sign up</string>
     <string name="turn_on_internet">Turn internet ON</string>
+    <string name="сhoose_a_different_date_range">Choose a different date range</string>
     <string name="no_connection_to_the_server">No connection to the server</string>
     <string name="enter_password_again">Enter the password again</string>
     <string name="select_site_and_person">Select site and person</string>

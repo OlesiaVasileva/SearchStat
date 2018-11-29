@@ -30,7 +30,7 @@ class RestApi {
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://51.15.55.90:8080/restapi-v4/?")
+                .baseUrl("http://95.213.203.35:8080/restapi-v4/?")
                 .client(client)
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())

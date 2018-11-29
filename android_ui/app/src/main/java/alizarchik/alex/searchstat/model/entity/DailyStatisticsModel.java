@@ -9,7 +9,8 @@ import java.io.Serializable;
  * Created by Olesia on 25.12.2017.
  */
 
-public class DailyStatisticsModel implements Serializable{
+public class
+DailyStatisticsModel implements Serializable{
     @SerializedName("date")
     @Expose
     private String date;

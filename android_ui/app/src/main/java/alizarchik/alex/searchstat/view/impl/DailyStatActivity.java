@@ -200,6 +200,13 @@ public class DailyStatActivity extends AppCompatActivity implements IDailyStatVi
     }
 
     @Override
+    public void сhooseDifferentDateRange() {
+        Log.d(TAG, "По выбранным данным информация отсутствует");
+        Toast.makeText(DailyStatActivity.this, R.string.сhoose_a_different_date_range, Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
     public void showNoConnectionToTheServer() {
         Log.d(TAG, "Hет соединения с сервером");
         Toast.makeText(DailyStatActivity.this, R.string.no_connection_to_the_server, Toast.LENGTH_SHORT).show();
