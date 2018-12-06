@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="alizarchik.alex.searchstat">
+          package="com.olesix.searchstat">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".view.impl.LoginActivity"
+            android:name="com.olesix.searchstat.view.impl.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -20,22 +20,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.impl.GeneralStatActivity"
-            android:parentActivityName=".view.impl.MainActivity"
+            android:name="com.olesix.searchstat.view.impl.LoginActivity"
+            android:parentActivityName="com.olesix.searchstat.view.impl.SignUpActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".view.impl.MainActivity"
+            android:name="com.olesix.searchstat.view.impl.GeneralStatActivity"
+            android:parentActivityName="com.olesix.searchstat.view.impl.MainActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".view.impl.SignUpActivity"
-            android:parentActivityName=".view.impl.LoginActivity"
+            android:name="com.olesix.searchstat.view.impl.SignUpActivity"
+            android:parentActivityName="com.olesix.searchstat.view.impl.LoginActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".view.impl.DailyStatActivity"
-            android:parentActivityName=".view.impl.MainActivity"
+            android:name="com.olesix.searchstat.view.impl.DailyStatActivity"
+            android:parentActivityName="com.olesix.searchstat.view.impl.MainActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".view.impl.GraphActivity"
+            android:name="com.olesix.searchstat.view.impl.GraphActivity"
             android:screenOrientation="portrait"/>
     </application>
 

@@ -10,23 +10,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <ProgressBar
-        android:id="@+id/progressBar_Login_Screen"
-        style="?android:attr/progressBarStyle"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone" />
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/logoView"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="30dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/logo_wb" />
+        <ProgressBar
+            android:id="@+id/progressBar_Login_Screen"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/logoView"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/logo_wb" />
+    </FrameLayout>
 
     <LinearLayout
         android:id="@+id/lin_lay_log_screen"
@@ -43,6 +48,10 @@
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:lines="1"
+            android:inputType="text"
             android:hint="@string/login" />
 
         <EditText
@@ -53,6 +62,7 @@
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:hint="@string/password"
+            android:imeOptions="actionSend"
             android:inputType="textPassword" />
 
         <Button

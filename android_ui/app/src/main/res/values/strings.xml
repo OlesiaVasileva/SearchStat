@@ -26,10 +26,13 @@
     <string name="show_statistic">Show statistic</string>
     <string name="sign_up">Sign up</string>
     <string name="turn_on_internet">Turn internet ON</string>
+    <string name="enter_correct_email">"Enter correct email"</string>
+    <string name="enter_login_or_password">"Enter login or password"</string>
     <string name="сhoose_a_different_date_range">Choose a different date range</string>
     <string name="no_connection_to_the_server">No connection to the server</string>
     <string name="enter_password_again">Enter the password again</string>
     <string name="select_site_and_person">Select site and person</string>
     <string name="graph_general_stat">Graph of popularity of politicians by number of mentions</string>
     <string name="graph_daily_stat">Graph of the number of pages with the mention of the policy from the selected period of time</string>
+    <string name="log_out">Log out</string>
 </resources>
