@@ -2,6 +2,8 @@ package com.olesix.searchstat.view.impl;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -21,6 +23,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -97,9 +100,27 @@ public class GeneralStatActivity extends AppCompatActivity implements IGeneralSt
                 R.drawable.line_divider)));
         mRecyclerView.addItemDecoration(divider);
         TextView currentDate = findViewById(R.id.tvCurrentDate);
+        setDate(currentDate);
+    }
+
+    private void setDate(TextView currentDate) {
         Date dateNow = new Date();
         SimpleDateFormat formatForDateNow = new SimpleDateFormat("MMMM dd, yyyy hh:mm a", Locale.ENGLISH);
-        currentDate.setText(formatForDateNow.format(dateNow));
+
+        if (Locale.getDefault().getLanguage().equals("en")) {
+            Log.d(TAG, "checkLocale " + Locale.getDefault().getLanguage().equals("en"));
+            currentDate.setText(formatForDateNow.format(dateNow));
+        }else {
+            SimpleDateFormat newDateFormat = new SimpleDateFormat("dd MMMM yyyy, H:mm", Locale.getDefault());
+            try {
+                dateNow = formatForDateNow.parse(currentDate.toString());
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
+            String result = newDateFormat.format(dateNow);
+            currentDate.setText(result);
+        }
     }
 
     @Override

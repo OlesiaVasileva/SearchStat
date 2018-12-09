@@ -22,12 +22,15 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
+import java.util.Objects;
 
 import com.olesix.searchstat.R;
 import com.olesix.searchstat.model.entity.DailyStatisticsModel;
@@ -69,14 +72,9 @@ public class DailyStatActivity extends AppCompatActivity implements IDailyStatVi
         ConnectivityManager connectivityManager =
                 (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         assert connectivityManager != null;
+        presenter = new DailyStatPresenter(this);
         NetworkInfo networkinfo = connectivityManager.getActiveNetworkInfo();
-        if (networkinfo != null && networkinfo.isConnected()) {
-            if (presenter == null) {
-                presenter = new DailyStatPresenter(this);
-            }
-        } else {
-            showNoConnectionMessage();
-        }
+        assert networkinfo != null;
         buttonSelectSite.setOnClickListener((v) -> onClickBtnSite());
         buttonSelectPerson.setOnClickListener((v)-> onClickBtnPerson());
         startDate.setOnClickListener(view -> {
@@ -110,8 +108,8 @@ public class DailyStatActivity extends AppCompatActivity implements IDailyStatVi
         DividerItemDecoration divider = new
                 DividerItemDecoration(mRecyclerView.getContext(),
                 DividerItemDecoration.VERTICAL);
-        divider.setDrawable(ContextCompat.getDrawable(this,
-                R.drawable.line_divider));
+        divider.setDrawable(Objects.requireNonNull(ContextCompat.getDrawable(this,
+                R.drawable.line_divider)));
         mRecyclerView.addItemDecoration(divider);
         progressBar = findViewById(R.id.progressBar_Daily_Stat);
     }
@@ -165,24 +163,21 @@ public class DailyStatActivity extends AppCompatActivity implements IDailyStatVi
     public void showDefaultValues() {
         if (tokenStorage != null) {
             Log.d(TAG, "tokenStorage " + tokenStorage);
-            Date dateNow = new Date();
-            SimpleDateFormat formatForDateNow = new SimpleDateFormat("yyyy-MM-dd");
-            date2 = formatForDateNow.format(dateNow);
-            Log.d(TAG, "currentDate " + date2);
             person = "Жириновский";
             site = "lenta.ru";
-            date1 = "January 1, 2018";
+            date1 = "2018-01-01";
+            Date currentDate = new Date();
+            SimpleDateFormat formatForDateNow = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+            date2 = formatForDateNow.format(currentDate);
             presenter.loadDailyStat(tokenStorage.loadToken(this), person, date1, date2, site, false);
             Log.d(TAG, "showDefaultValues: person  " + person + " date1 " + date1 + " currentDate " + date2 + " site " + site);
             progressBar.setVisibility(View.VISIBLE);
-            formatForDateNow = new SimpleDateFormat("MMMM dd, yyyy");
             buttonSelectPerson.setText(person);
             buttonSelectSite.setText(site);
             startDate.setText(date1);
-            endDate.setText(formatForDateNow.format(dateNow));
+            endDate.setText(date2);
         }
     }
-
 
     @Override
     public void updateSites(List<Site> sites) {
@@ -282,11 +277,17 @@ public class DailyStatActivity extends AppCompatActivity implements IDailyStatVi
 
     public void setDate1(String date1) {
         this.date1 = date1;
+        Log.d(TAG, "setDate1 " + date1);
         showDailyStat(person, date1, date2, site);
+        startDate.setText(date1);
+        dailyStatisticList.clear();
     }
 
     public void setDate2(String date2) {
         this.date2 = date2;
+        Log.d(TAG, "setDate2 " + date2);
         showDailyStat(person, date1, date2, site);
+        endDate.setText(date2);
+        dailyStatisticList.clear();
     }
 }

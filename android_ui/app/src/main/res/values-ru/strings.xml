@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="app_name">SearchStat</string>
+    <string name="app_name" translatable="false">SearchStat</string>
 
     <string name="password">Пароль</string>
     <string name="repeat_password">Повторите пароль</string>
-    <string name="login">Войти</string>
+    <string name="login">Логин</string>
     <string name="username">Имя пользователя</string>
     <string name="detailed_stat">Ежедневная статистика</string>
     <string name="general_stat">Общая статистика</string>
     <string name="detail_stat">Ежедневная статистика</string>
     <string name="name">Имя</string>
     <string name="mentions">Упоминания</string>
-    <string name="person">Человек</string>
-    <string name="number_of_new_pages">Кол-во страниц</string>
-    <string name="select_a_person">Выберите человека</string>
+    <string name="person">Личность</string>
+    <string name="number_of_new_pages">Количество новых страниц</string>
+    <string name="select_a_person">Выберите личность</string>
     <string name="graphics">Графики</string>
     <string name="choose_date">Выберите дату</string>
     <string name="ready">Готово</string>
-
-    <string-array name="sitelist">
-        <item>Сайт 1</item>
-        <item>Сайт 2</item>
-        <item>Сайт 3</item>
-        <item>Сайт 4</item>
-    </string-array>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="email">Почтовый адрес</string>
-    <string name="date">Дата</string>
+    <string name="email" translatable="false">Email</string>
     <string name="select_a_site">Выберите сайт</string>
     <string name="start_date">Начальная дата</string>
     <string name="end_date">Конечная дата</string>
-    <string name="current_date">Дата</string>
+    <string name="date">Дата</string>
+    <string name="current_date">Текущая дата</string>
     <string name="show_statistic">Показать статистику</string>
     <string name="sign_up">Зарегистрироваться</string>
-    <string name="turn_on_internet">Подключите интернет</string>
-    <string name="enter_password_again">Введите пароль ещё раз</string>
-
+    <string name="turn_on_internet">Проверьте интернет</string>
+    <string name="enter_correct_email">"Введите корректный email"</string>
+    <string name="enter_login_or_password">"Введите логин или пароль"</string>
+    <string name="сhoose_a_different_date_range">Выберите другой диапазон дат</string>
+    <string name="no_connection_to_the_server">Нет подключения к серверу</string>
+    <string name="enter_password_again">Введите пароль снова</string>
+    <string name="select_site_and_person">Выберите сайт и личность</string>
+    <string name="graph_general_stat">График популярности политиков по количеству упоминаний</string>
+    <string name="graph_daily_stat">График популярности политиков по количеству упоминаний за выбранный период времени</string>
+    <string name="log_out">Выйти</string>
+    <string name="buttonName">Войти</string>
 </resources>
